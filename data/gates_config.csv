@@ -1,0 +1,54 @@
+gate_number,terminal,gate_type,max_aircraft_size,airline_preference,jetbridge,customs_capable,notes
+1,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+3,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+5,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+7,Terminal 1,Domestic,Medium,Alaska,Yes,No,Alaska gate
+9,Terminal 1,Domestic,Medium,Alaska,Yes,No,Alaska gate
+11,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+13,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+15,Terminal 1,Domestic,Medium,Alaska,Yes,No,Alaska gate
+17,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+19,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+21,Terminal 1,Domestic,Medium,Alaska,Yes,No,Alaska gate
+23,Terminal 1,Domestic,Medium,Southwest,Yes,No,Southwest hub gate
+30,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+32,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+34,Terminal 2,Domestic,Medium,Virgin America,Yes,No,Virgin gate
+36,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+38,Terminal 2,Domestic,Medium,Virgin America,Yes,No,Virgin gate
+40,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+42,Terminal 2,Domestic,Medium,American,Yes,No,American gate
+44,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+46,Terminal 2,Domestic,Medium,Virgin America,Yes,No,Virgin gate
+48,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+50,Terminal 2,Domestic,Medium,American,Yes,No,American gate
+52,Terminal 2,Domestic,Large,Delta,Yes,No,Delta gate
+54,Terminal 2,Domestic,Medium,Delta,Yes,No,Delta gate
+56,Terminal 2,Domestic,Large,American,Yes,No,American hub gate
+58,Terminal 2,Domestic,Medium,American,Yes,No,American gate
+70,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+72,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+74,Terminal 3,Domestic,Medium,United,Yes,No,United gate
+76,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+78,Terminal 3,Domestic,Medium,United,Yes,No,United gate
+80,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+82,Terminal 3,Domestic,Medium,United,Yes,No,United gate
+84,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+86,Terminal 3,Domestic,Medium,United,Yes,No,United gate
+88,Terminal 3,Domestic,Large,United,Yes,No,United hub gate
+90,Terminal 3,Domestic,Medium,United,Yes,No,United gate
+A1,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+A3,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+A5,International,International,Large,Any,Yes,Yes,International gate
+A7,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+A9,International,International,Large,Any,Yes,Yes,International gate
+A11,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+A13,International,International,Large,Any,Yes,Yes,International gate
+A15,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+G1,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+G3,International,International,Large,Any,Yes,Yes,International gate
+G5,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+G7,International,International,Large,Any,Yes,Yes,International gate
+G9,International,International,Extra Large,Any,Yes,Yes,Wide-body capable
+G11,International,International,Large,Any,Yes,Yes,International gate
+G13,International,International,Extra Large,Any,Yes,Yes,Wide-body capable 

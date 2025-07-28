@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate-Genie: SFO Gate Assignment Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .header .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .status-bar {
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-info {
+            font-size: 0.9rem;
+        }
+
+        .refresh-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: #2980b9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            max-height: 500px;
+            border-radius: 8px;
+            border: 1px solid #e1e8ed;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        tr:hover {
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-arrived { background: #2ecc71; color: white; }
+        .status-approaching { background: #f39c12; color: white; }
+        .status-en-route { background: #3498db; color: white; }
+        .status-waiting { background: #e74c3c; color: white; }
+
+        .gate-badge {
+            background: #9b59b6;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .airline-logo {
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .airline-united { background: #004b87; color: white; }
+        .airline-american { background: #c8102e; color: white; }
+        .airline-southwest { background: #f9b612; color: #111b2c; }
+        .airline-delta { background: #003366; color: white; }
+        .airline-alaska { background: #01426a; color: white; }
+        .airline-international { background: #2c3e50; color: white; }
+
+        .assignments-grid {
+            width: 100%;
+        }
+
+        .recent-assignments {
+            grid-column: 1 / -1;
+        }
+
+        .gate-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gate-status {
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gate-available {
+            background: #d5f4e6;
+            color: #27ae60;
+            border: 2px solid #27ae60;
+        }
+
+        .gate-occupied {
+            background: #fdeaea;
+            color: #e74c3c;
+            border: 2px solid #e74c3c;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛫 Gate-Genie</h1>
+        <div class="subtitle">San Francisco International Airport - Intelligent Gate Assignment System</div>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-info">
+            <span id="last-updated">Last Updated: Loading...</span> | 
+            <span id="total-flights">Flights: 0</span> | 
+            <span id="assigned-gates">Assigned: 0</span>
+        </div>
+        <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Data</button>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-grid">
+            <!-- Arrivals Table -->
+            <div class="card">
+                <h2>📅 Flight Arrivals</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Flight</th>
+                                <th>Airline</th>
+                                <th>Aircraft</th>
+                                <th>Origin</th>
+                                <th>Arrival</th>
+                                <th>Status</th>
+                                <th>Gate</th>
+                                <th>Passengers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="arrivals-table">
+                            <tr><td colspan="8" class="loading">Loading arrivals data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Gate Status Overview -->
+            <div class="card">
+                <h2>🚪 Gate Status</h2>
+                <div id="gate-overview" class="gate-map">
+                    <div class="loading">Loading gate status...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Assignments -->
+        <div class="card recent-assignments">
+            <h2>⚡ Recent AI Gate Assignments</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Flight</th>
+                            <th>Airline</th>
+                            <th>Aircraft</th>
+                            <th>Origin</th>
+                            <th>Assigned Gate</th>
+                            <th>AI Decision</th>
+                        </tr>
+                    </thead>
+                    <tbody id="assignments-table">
+                        <tr><td colspan="7" class="loading">Loading assignment data...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dashboardData = {};
+
+        // Helper functions
+        function getAirlineClass(airline) {
+            const airlineMap = {
+                'United': 'airline-united',
+                'American': 'airline-american', 
+                'Southwest': 'airline-southwest',
+                'Delta': 'airline-delta',
+                'Alaska': 'airline-alaska'
+            };
+            return airlineMap[airline] || 'airline-international';
+        }
+
+        function getStatusClass(status) {
+            const statusMap = {
+                'Arrived': 'status-arrived',
+                'Approaching': 'status-approaching',
+                'En Route': 'status-en-route',
+                'WAITING': 'status-waiting'
+            };
+            return statusMap[status] || 'status-en-route';
+        }
+
+        function formatTime(timestamp) {
+            if (!timestamp) return '';
+            try {
+                return new Date(timestamp).toLocaleTimeString();
+            } catch {
+                return timestamp;
+            }
+        }
+
+        function updateArrivalsTable(arrivals) {
+            const tbody = document.getElementById('arrivals-table');
+            
+            if (!arrivals || arrivals.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" class="loading">No arrivals data available</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = arrivals.map(flight => `
+                <tr>
+                    <td><strong>${flight.flight_number}</strong></td>
+                    <td><span class="airline-logo ${getAirlineClass(flight.airline)}">${flight.airline}</span></td>
+                    <td>${flight.aircraft_type}</td>
+                    <td>${flight.origin}</td>
+                    <td>${flight.scheduled_arrival}</td>
+                    <td><span class="status-badge ${getStatusClass(flight.status)}">${flight.status}</span></td>
+                    <td>${flight.gate_assigned ? `<span class="gate-badge">${flight.gate_assigned}</span>` : '-'}</td>
+                    <td>${flight.passengers}</td>
+                </tr>
+            `).join('');
+        }
+
+        function updateGateOverview(gateOccupancy) {
+            const container = document.getElementById('gate-overview');
+            
+            if (!gateOccupancy || gateOccupancy.length === 0) {
+                container.innerHTML = '<div class="loading">No gate data available</div>';
+                return;
+            }
+
+            container.innerHTML = gateOccupancy.slice(0, 12).map(gate => `
+                <div class="gate-status ${gate.status === 'Available' ? 'gate-available' : 'gate-occupied'}">
+                    <div><strong>Gate ${gate.gate_number}</strong></div>
+                    <div>${gate.status}</div>
+                    ${gate.current_flight ? `<div style="font-size: 0.8rem;">${gate.current_flight}</div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        function updateAssignmentsTable(assignments) {
+            const tbody = document.getElementById('assignments-table');
+            
+            if (!assignments || assignments.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No assignment data available</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = assignments.slice().reverse().slice(0, 10).map(assignment => `
+                <tr>
+                    <td>${formatTime(assignment.timestamp)}</td>
+                    <td><strong>${assignment.flight_number}</strong></td>
+                    <td><span class="airline-logo ${getAirlineClass(assignment.airline)}">${assignment.airline}</span></td>
+                    <td>${assignment.aircraft_type}</td>
+                    <td>${assignment.origin}</td>
+                    <td><span class="gate-badge">${assignment.assigned_gate}</span></td>
+                    <td style="font-size: 0.8rem;">${assignment.assignment_reason}</td>
+                </tr>
+            `).join('');
+        }
+
+        function updateStatusBar(data) {
+            document.getElementById('last-updated').textContent = `Last Updated: ${formatTime(data.last_updated)}`;
+            document.getElementById('total-flights').textContent = `Flights: ${data.arrivals ? data.arrivals.length : 0}`;
+            
+            const assignedCount = data.arrivals ? 
+                data.arrivals.filter(f => f.gate_assigned && f.gate_assigned !== '').length : 0;
+            document.getElementById('assigned-gates').textContent = `Assigned: ${assignedCount}`;
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('/api/data');
+                dashboardData = await response.json();
+                
+                updateArrivalsTable(dashboardData.arrivals);
+                updateGateOverview(dashboardData.gate_occupancy);
+                updateAssignmentsTable(dashboardData.assignments);
+                updateStatusBar(dashboardData);
+                
+                console.log('Dashboard data updated successfully');
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        async function refreshData() {
+            const btn = document.querySelector('.refresh-btn');
+            btn.textContent = '🔄 Refreshing...';
+            btn.disabled = true;
+            
+            try {
+                await fetch('/refresh');
+                await loadData();
+            } catch (error) {
+                console.error('Error refreshing data:', error);
+            }
+            
+            btn.textContent = '🔄 Refresh Data';
+            btn.disabled = false;
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            
+            // Auto-refresh every 30 seconds
+            setInterval(loadData, 30000);
+        });
+    </script>
+</body>
+</html> 

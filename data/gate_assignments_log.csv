@@ -1,0 +1,20 @@
+timestamp,flight_number,airline,aircraft_type,origin,assigned_gate,assignment_reason
+2025-07-27T17:44:58.064999,AA5678,American,Airbus A321,New York JFK,32,AI-optimized assignment
+2025-07-27T17:45:00.342545,WN2345,Southwest,Boeing 737-700,Las Vegas,11,AI-optimized assignment
+2025-07-27T17:45:02.666243,DL9876,Delta,Boeing 757-200,Seattle,3,AI-optimized assignment
+2025-07-27T17:45:05.061507,AS1122,Alaska,Boeing 737-900,Portland,21,AI-optimized assignment
+2025-07-27T17:45:06.973324,BA0285,British Airways,Boeing 777-300ER,London Heathrow,A7,AI-optimized assignment
+2025-07-27T17:45:09.212568,LH0441,Lufthansa,Airbus A340-600,Frankfurt,G1,AI-optimized assignment
+2025-07-27T17:45:11.075312,UA0870,United,Boeing 777-200,Tokyo Narita,A11,AI-optimized assignment
+2025-07-27T17:45:12.903361,AF0083,Air France,Airbus A350-900,Paris CDG,G13,AI-optimized assignment
+2025-07-27T17:45:14.846513,KL0606,KLM,Boeing 777-200ER,Amsterdam,G5,AI-optimized assignment
+2025-07-27T17:45:16.918885,SQ0019,Singapore Airlines,Airbus A350-900,Singapore,A1,AI-optimized assignment
+2025-07-27T17:45:18.532159,CX0879,Cathay Pacific,Boeing 777-300ER,Hong Kong,WAITING,AI-optimized assignment
+2025-07-27T17:45:20.559213,VS0041,Virgin Atlantic,Boeing 787-9,London Heathrow,A13,AI-optimized assignment
+2025-07-27T17:45:22.425181,WN1234,Southwest,Boeing 737-800,Phoenix,17,AI-optimized assignment
+2025-07-27T17:45:24.402126,UA2567,United,Boeing 737-900,Denver,38,AI-optimized assignment
+2025-07-27T17:45:26.285342,AA8901,American,Boeing 787-8,Miami,44,AI-optimized assignment
+2025-07-27T17:45:28.345812,DL3456,Delta,Airbus A330-300,Atlanta,G7,AI-optimized assignment
+2025-07-27T17:45:30.221929,AS7890,Alaska,Boeing 737-800,Anchorage,15,AI-optimized assignment
+2025-07-27T17:45:32.085479,NH0007,ANA,Boeing 787-9,Tokyo Haneda,A5,AI-optimized assignment
+2025-07-27T17:45:33.694251,TK0080,Turkish Airlines,Boeing 777-300ER,Istanbul,WAITING,AI-optimized assignment
