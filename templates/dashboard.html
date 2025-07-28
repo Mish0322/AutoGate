@@ -13,39 +13,39 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            background: #1a1a1a;
+            color: #e2e8f0;
             min-height: 100vh;
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.95);
+            background: #2d2d2d;
             padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #404040;
         }
 
         .header h1 {
-            color: #2c3e50;
+            color: #f7fafc;
             font-size: 2.5rem;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
         }
 
         .header .subtitle {
             text-align: center;
-            color: #7f8c8d;
+            color: #a0aec0;
             font-size: 1.1rem;
             margin-top: 0.5rem;
         }
 
         .status-bar {
-            background: rgba(52, 73, 94, 0.9);
-            color: white;
+            background: #2d2d2d;
+            color: #e2e8f0;
             padding: 0.75rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #404040;
         }
 
         .status-info {
@@ -53,9 +53,9 @@
         }
 
         .refresh-btn {
-            background: #3498db;
-            color: white;
-            border: none;
+            background: #4a4a4a;
+            color: #e2e8f0;
+            border: 1px solid #5a5a5a;
             padding: 0.5rem 1rem;
             border-radius: 5px;
             cursor: pointer;
@@ -64,7 +64,7 @@
         }
 
         .refresh-btn:hover {
-            background: #2980b9;
+            background: #5a5a5a;
         }
 
         .container {
@@ -81,26 +81,26 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: #2d2d2d;
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            border: 1px solid #404040;
         }
 
         .card h2 {
-            color: #2c3e50;
+            color: #f7fafc;
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 1px solid #404040;
             padding-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .table-container {
             overflow-x: auto;
             max-height: 500px;
             border-radius: 8px;
-            border: 1px solid #e1e8ed;
+            border: 1px solid #404040;
         }
 
         table {
@@ -110,8 +110,8 @@
         }
 
         th {
-            background: #34495e;
-            color: white;
+            background: #3a3a3a;
+            color: #f7fafc;
             padding: 0.75rem;
             text-align: left;
             font-weight: 600;
@@ -122,11 +122,11 @@
 
         td {
             padding: 0.75rem;
-            border-bottom: 1px solid #e1e8ed;
+            border-bottom: 1px solid #404040;
         }
 
         tr:hover {
-            background: rgba(52, 152, 219, 0.1);
+            background: #3a3a3a;
         }
 
         .status-badge {
@@ -137,14 +137,14 @@
             text-transform: uppercase;
         }
 
-        .status-arrived { background: #2ecc71; color: white; }
-        .status-approaching { background: #f39c12; color: white; }
-        .status-en-route { background: #3498db; color: white; }
-        .status-waiting { background: #e74c3c; color: white; }
+        .status-arrived { background: #4a5568; color: #e2e8f0; }
+        .status-approaching { background: #975a16; color: #e2e8f0; }
+        .status-en-route { background: #5a5a5a; color: #e2e8f0; }
+        .status-waiting { background: #9c4221; color: #e2e8f0; }
 
         .gate-badge {
-            background: #9b59b6;
-            color: white;
+            background: #4a4a4a;
+            color: #e2e8f0;
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             font-weight: 600;
@@ -156,12 +156,12 @@
             border-radius: 4px;
         }
 
-        .airline-united { background: #004b87; color: white; }
-        .airline-american { background: #c8102e; color: white; }
-        .airline-southwest { background: #f9b612; color: #111b2c; }
-        .airline-delta { background: #003366; color: white; }
-        .airline-alaska { background: #01426a; color: white; }
-        .airline-international { background: #2c3e50; color: white; }
+        .airline-united { background: #2d3748; color: #e2e8f0; }
+        .airline-american { background: #702459; color: #e2e8f0; }
+        .airline-southwest { background: #744210; color: #e2e8f0; }
+        .airline-delta { background: #1a202c; color: #e2e8f0; }
+        .airline-alaska { background: #2c5282; color: #e2e8f0; }
+        .airline-international { background: #4a5568; color: #e2e8f0; }
 
         .assignments-grid {
             width: 100%;
@@ -190,21 +190,21 @@
         }
 
         .gate-available {
-            background: #d5f4e6;
-            color: #27ae60;
-            border: 2px solid #27ae60;
+            background: #3a3a3a;
+            color: #a0aec0;
+            border: 1px solid #4a5568;
         }
 
         .gate-occupied {
-            background: #fdeaea;
-            color: #e74c3c;
-            border: 2px solid #e74c3c;
+            background: #3a3a3a;
+            color: #a0aec0;
+            border: 1px solid #9c4221;
         }
 
         .loading {
             text-align: center;
             padding: 2rem;
-            color: #7f8c8d;
+            color: #a0aec0;
         }
 
         @media (max-width: 768px) {
@@ -224,7 +224,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>🛫 Gate-Genie</h1>
+        <h1>Gate-Mate</h1>
         <div class="subtitle">San Francisco International Airport - Intelligent Gate Assignment System</div>
     </div>
 
@@ -234,8 +234,8 @@
             <span id="total-flights">Flights: 0</span> | 
             <span id="assigned-gates">Assigned: 0</span>
         </div>
-        <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Data</button>
-        <a href="/map" style="color: #3498db; text-decoration: none; margin-left: 1rem;">🗺️ Interactive Map</a>
+                    <button class="refresh-btn" onclick="refreshData()">Refresh Data</button>
+        <a href="/map" style="color: #a0aec0; text-decoration: none; margin-left: 1rem;">Interactive Map</a>
     </div>
 
     <div class="container">
@@ -275,7 +275,7 @@
 
         <!-- Recent Assignments -->
         <div class="card recent-assignments">
-            <h2>⚡ Recent AI Gate Assignments</h2>
+            <h2>Recent AI Gate Assignments</h2>
             <div class="table-container">
                 <table>
                     <thead>
@@ -418,7 +418,7 @@
 
         async function refreshData() {
             const btn = document.querySelector('.refresh-btn');
-            btn.textContent = '🔄 Refreshing...';
+            btn.textContent = 'Refreshing...';
             btn.disabled = true;
             
             try {
@@ -428,7 +428,7 @@
                 console.error('Error refreshing data:', error);
             }
             
-            btn.textContent = '🔄 Refresh Data';
+                            btn.textContent = 'Refresh Data';
             btn.disabled = false;
         }
 
