@@ -11,8 +11,14 @@ def main():
     """Run gate assignment once and exit"""
     print("🛫 Starting Gate-Genie assignment process...")
     
-    # Replace with your actual NVIDIA NIM API key
-    API_KEY = "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"
+    # Get API key from environment variable
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+API_KEY = os.getenv('NVIDIA_API_KEY')
+if not API_KEY:
+    raise ValueError("NVIDIA_API_KEY environment variable not set. Please create a .env file with your API key.")
     
     try:
         # Initialize Gate-Genie

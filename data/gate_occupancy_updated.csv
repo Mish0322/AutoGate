@@ -2,14 +2,14 @@ gate_number,status,current_flight,departure_time,available_time,turnaround_mins,
 B1,Occupied,WN4567,16:30,16:45,30,Southwest departure to LAX
 B3,Available,,,14:00,45,Ready for assignment
 B5,Occupied,WN8901,17:15,17:30,30,Southwest departure to LAS
-B7,Available,,,15:30,45,Ready for assignment
+B7,Occupied,DL9876,,15:15,45,Ready for assignment
 B9,Occupied,AS3456,16:00,16:15,40,Alaska departure to SEA
 B11,Available,,,14:30,45,Ready for assignment
 B13,Occupied,WN2345,18:00,18:15,30,Southwest departure to PHX
 B15,Occupied,AS1122,,15:30,40,Ready for assignment
 B17,Occupied,WN2345,,15:00,30,Ready for assignment
 B19,Occupied,WN7890,17:30,17:45,30,Southwest departure to DEN
-B21,Occupied,AS7890,,18:45,40,Ready for assignment
+B21,Available,,,16:30,40,Ready for assignment
 B23,Occupied,WN1234,,17:45,30,Ready for assignment
 B25,Occupied,DL456,17:45,18:00,35,Delta departure to ATL
 B27,Available,,,15:15,35,Ready for assignment
@@ -19,12 +19,12 @@ C6,Available,,,16:15,35,Ready for assignment
 C8,Available,,,14:45,35,Ready for assignment
 C10,Occupied,AS234,16:30,16:45,40,Alaska departure to SEA
 D1,Occupied,AA8901,18:30,18:45,35,American departure to MIA
-D3,Occupied,DL9876,,15:15,35,Ready for assignment
+D3,Available,,,17:00,35,Ready for assignment
 D5,Occupied,AA5678,,14:45,35,Ready for assignment
-D7,Occupied,DL3456,,18:30,40,Ready for assignment
-D9,Available,,,15:45,35,Ready for assignment
-D11,Occupied,AA8901,,18:15,35,Ready for assignment
-D13,Available,,,17:15,35,Ready for assignment
+D7,Occupied,AS7890,,18:45,40,Ready for assignment
+D9,Occupied,AA8901,,18:15,35,Ready for assignment
+D11,Available,,,16:30,35,Ready for assignment
+D13,Occupied,DL3456,,18:30,35,Ready for assignment
 D15,Occupied,AA345,18:15,18:30,35,American departure to ORD
 D17,Available,,,16:00,35,Ready for assignment
 E1,Available,,,15:00,50,Ready for assignment
@@ -51,12 +51,12 @@ A5,Occupied,AF0083,,16:30,60,Ready for assignment
 A7,Occupied,BA0285,,15:45,60,Ready for assignment
 A9,Occupied,LH442,20:00,20:15,90,Lufthansa departure to FRA
 A11,Occupied,LH0441,,16:00,60,Ready for assignment
-A13,Occupied,SQ0019,,17:00,60,Ready for assignment
+A13,Occupied,VS0041,,17:30,60,Ready for assignment
 A15,Occupied,AF084,19:15,19:30,90,Air France departure to CDG
-G1,Occupied,CX0879,,17:15,60,Ready for assignment
+G1,Occupied,SQ0019,,17:00,60,Ready for assignment
 G3,Occupied,SQ020,21:00,21:15,90,Singapore Airlines departure to SIN
-G5,Occupied,NH0007,,19:00,60,Ready for assignment
+G5,Occupied,CX0879,,17:15,60,Ready for assignment
 G7,Occupied,KL0606,,16:45,60,Ready for assignment
 G9,Occupied,CX880,20:30,20:45,90,Cathay Pacific departure to HKG
-G11,Available,,,19:00,60,Ready for assignment
-G13,Occupied,VS0041,,17:30,60,Ready for assignment 
+G11,Occupied,NH0007,,19:00,60,Ready for assignment
+G13,Occupied,TK0080,,19:15,60,Ready for assignment 

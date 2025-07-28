@@ -24,9 +24,14 @@
    pip install -r requirements.txt
    ```
 
-2. **Update API Key**:
-   - Edit `gate_genie.py` line 252: Replace the API key with your NVIDIA NIM key
-   - Edit `web_server.py` line 67: Replace the API key with your NVIDIA NIM key
+2. **Set up Environment Variables**:
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env and add your NVIDIA NIM API key
+# NVIDIA_API_KEY=your-actual-api-key-here
+```
 
 3. **Run the system**:
    ```bash
@@ -104,9 +109,9 @@ AutoGate/
 ## 🎛️ Configuration
 
 ### API Key Setup
-Replace the API key in both files:
-```python
-API_KEY = "your-nvidia-nim-api-key-here"
+Create a `.env` file in the project root:
+```
+NVIDIA_API_KEY=your-nvidia-nim-api-key-here
 ```
 
 ### Customization Options

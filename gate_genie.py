@@ -7,10 +7,15 @@ Uses NVIDIA NIM Llama-3 to make smart gate assignments for SFO arrivals
 import pandas as pd
 import time
 import json
+import os
 from datetime import datetime, timedelta
 from openai import OpenAI
 from typing import Dict, List, Optional
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -464,8 +469,10 @@ Analyze the flight requirements against available gates and respond with ONLY th
 
 def main():
     """Main function to run Gate-Genie"""
-    # Replace with your actual NVIDIA NIM API key
-    API_KEY = "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"
+    # Get API key from environment variable
+    API_KEY = os.getenv('NVIDIA_API_KEY')
+    if not API_KEY:
+        raise ValueError("NVIDIA_API_KEY environment variable not set. Please create a .env file with your API key.")
     
     try:
         # Initialize Gate-Genie

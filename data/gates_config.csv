@@ -1,62 +1,62 @@
 gate_number,terminal,gate_type,max_aircraft_size,airline_preference,jetbridge,customs_capable,lat,lng,notes
-B1,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6162,-122.3896,Southwest hub gate
-B3,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6164,-122.3898,Southwest hub gate
-B5,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6166,-122.3900,Southwest hub gate
-B7,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6168,-122.3902,Alaska gate
-B9,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6170,-122.3904,Alaska gate
-B11,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6172,-122.3906,Southwest hub gate
-B13,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6174,-122.3908,Southwest hub gate
-B15,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6176,-122.3910,Alaska gate
-B17,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6178,-122.3912,Southwest hub gate
-B19,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6180,-122.3914,Southwest hub gate
-B21,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6182,-122.3916,Alaska gate
-B23,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6184,-122.3918,Southwest hub gate
-B25,Terminal 1,Domestic,Medium,Delta,Yes,No,37.6186,-122.3920,Delta gate
-B27,Terminal 1,Domestic,Medium,American,Yes,No,37.6188,-122.3922,American gate
-C1,Terminal 2,Domestic,Large,Delta,Yes,No,37.6195,-122.3828,Delta hub gate
-C3,Terminal 2,Domestic,Medium,Delta,Yes,No,37.6197,-122.3830,Delta gate
-C5,Terminal 2,Domestic,Large,Delta,Yes,No,37.6199,-122.3832,Delta hub gate
-C7,Terminal 2,Domestic,Medium,American,Yes,No,37.6201,-122.3834,American gate
-C9,Terminal 2,Domestic,Large,American,Yes,No,37.6203,-122.3836,American hub gate
-C11,Terminal 2,Domestic,Medium,American,Yes,No,37.6205,-122.3838,American gate
-D1,Terminal 2,Domestic,Large,American,Yes,No,37.6190,-122.3820,American hub gate
-D3,Terminal 2,Domestic,Large,Delta,Yes,No,37.6192,-122.3822,Delta hub gate
-D5,Terminal 2,Domestic,Medium,American,Yes,No,37.6194,-122.3824,American gate
-D7,Terminal 2,Domestic,Large,Delta,Yes,No,37.6196,-122.3826,Delta hub gate
-D9,Terminal 2,Domestic,Medium,American,Yes,No,37.6198,-122.3828,American gate
-D11,Terminal 2,Domestic,Large,American,Yes,No,37.6200,-122.3830,American hub gate
-D13,Terminal 2,Domestic,Medium,Delta,Yes,No,37.6202,-122.3832,Delta gate
-D15,Terminal 2,Domestic,Large,Delta,Yes,No,37.6204,-122.3834,Delta hub gate
-E1,Terminal 3,Domestic,Large,United,Yes,No,37.6210,-122.3758,United hub gate
-E3,Terminal 3,Domestic,Large,United,Yes,No,37.6212,-122.3760,United hub gate
-E5,Terminal 3,Domestic,Medium,United,Yes,No,37.6214,-122.3762,United gate
-E7,Terminal 3,Domestic,Large,United,Yes,No,37.6216,-122.3764,United hub gate
-E9,Terminal 3,Domestic,Medium,United,Yes,No,37.6218,-122.3766,United gate
-E11,Terminal 3,Domestic,Large,United,Yes,No,37.6220,-122.3768,United hub gate
-E13,Terminal 3,Domestic,Medium,United,Yes,No,37.6222,-122.3770,United gate
-F1,Terminal 3,Domestic,Large,United,Yes,No,37.6205,-122.3750,United hub gate
-F3,Terminal 3,Domestic,Large,United,Yes,No,37.6207,-122.3752,United hub gate
-F5,Terminal 3,Domestic,Medium,United,Yes,No,37.6209,-122.3754,United gate
-F7,Terminal 3,Domestic,Large,United,Yes,No,37.6211,-122.3756,United hub gate
-F9,Terminal 3,Domestic,Medium,United,Yes,No,37.6213,-122.3758,United gate
-F11,Terminal 3,Domestic,Large,United,Yes,No,37.6215,-122.3760,United hub gate
-F13,Terminal 3,Domestic,Medium,United,Yes,No,37.6217,-122.3762,United gate
-F15,Terminal 3,Domestic,Large,United,Yes,No,37.6219,-122.3764,United hub gate
-F17,Terminal 3,Domestic,Medium,United,Yes,No,37.6221,-122.3766,United gate
-F19,Terminal 3,Domestic,Large,United,Yes,No,37.6223,-122.3768,United hub gate
-F21,Terminal 3,Domestic,Medium,United,Yes,No,37.6225,-122.3770,United gate
-A1,International,International,Extra Large,Any,Yes,Yes,37.6128,-122.3920,Wide-body capable
-A3,International,International,Extra Large,Any,Yes,Yes,37.6130,-122.3922,Wide-body capable
-A5,International,International,Large,Any,Yes,Yes,37.6132,-122.3924,International gate
-A7,International,International,Extra Large,Any,Yes,Yes,37.6134,-122.3926,Wide-body capable
-A9,International,International,Large,Any,Yes,Yes,37.6136,-122.3928,International gate
-A11,International,International,Extra Large,Any,Yes,Yes,37.6138,-122.3930,Wide-body capable
-A13,International,International,Large,Any,Yes,Yes,37.6140,-122.3932,International gate
-A15,International,International,Extra Large,Any,Yes,Yes,37.6142,-122.3934,Wide-body capable
-G1,International,International,Extra Large,Any,Yes,Yes,37.6120,-122.3910,Wide-body capable
-G3,International,International,Large,Any,Yes,Yes,37.6122,-122.3912,International gate
-G5,International,International,Extra Large,Any,Yes,Yes,37.6124,-122.3914,Wide-body capable
-G7,International,International,Large,Any,Yes,Yes,37.6126,-122.3916,International gate
-G9,International,International,Extra Large,Any,Yes,Yes,37.6128,-122.3918,Wide-body capable
-G11,International,International,Large,Any,Yes,Yes,37.6130,-122.3920,International gate
-G13,International,International,Extra Large,Any,Yes,Yes,37.6132,-122.3922,Wide-body capable 
+B1,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6155,-122.3869,Southwest hub gate
+B3,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6156,-122.3871,Southwest hub gate
+B5,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6157,-122.3873,Southwest hub gate
+B7,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6158,-122.3875,Alaska gate
+B9,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6159,-122.3877,Alaska gate
+B11,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6160,-122.3879,Southwest hub gate
+B13,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6161,-122.3881,Southwest hub gate
+B15,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6162,-122.3883,Alaska gate
+B17,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6163,-122.3885,Southwest hub gate
+B19,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6164,-122.3887,Southwest hub gate
+B21,Terminal 1,Domestic,Medium,Alaska,Yes,No,37.6165,-122.3889,Alaska gate
+B23,Terminal 1,Domestic,Medium,Southwest,Yes,No,37.6166,-122.3891,Southwest hub gate
+B25,Terminal 1,Domestic,Medium,Delta,Yes,No,37.6167,-122.3893,Delta gate
+B27,Terminal 1,Domestic,Medium,American,Yes,No,37.6168,-122.3895,American gate
+C2,Terminal 2,Domestic,Large,American,Yes,No,37.6172,-122.3863,American hub gate
+C4,Terminal 2,Domestic,Large,American,Yes,No,37.6173,-122.3865,American hub gate
+C6,Terminal 2,Domestic,Medium,American,Yes,No,37.6174,-122.3867,American gate
+C8,Terminal 2,Domestic,Large,American,Yes,No,37.6175,-122.3869,American hub gate
+C10,Terminal 2,Domestic,Medium,Alaska,Yes,No,37.6176,-122.3871,Alaska gate
+D1,Terminal 2,Domestic,Large,American,Yes,No,37.6170,-122.3860,American hub gate
+D3,Terminal 2,Domestic,Medium,American,Yes,No,37.6171,-122.3862,American gate
+D5,Terminal 2,Domestic,Large,American,Yes,No,37.6172,-122.3864,American hub gate
+D7,Terminal 2,Domestic,Medium,Alaska,Yes,No,37.6173,-122.3866,Alaska gate
+D9,Terminal 2,Domestic,Large,American,Yes,No,37.6174,-122.3868,American hub gate
+D11,Terminal 2,Domestic,Medium,American,Yes,No,37.6175,-122.3870,American gate
+D13,Terminal 2,Domestic,Large,American,Yes,No,37.6176,-122.3872,American hub gate
+D15,Terminal 2,Domestic,Medium,American,Yes,No,37.6177,-122.3874,American gate
+D17,Terminal 2,Domestic,Large,American,Yes,No,37.6178,-122.3876,American hub gate
+E1,Terminal 3,Domestic,Large,United,Yes,No,37.6190,-122.3845,United hub gate
+E3,Terminal 3,Domestic,Large,United,Yes,No,37.6191,-122.3847,United hub gate
+E5,Terminal 3,Domestic,Medium,United,Yes,No,37.6192,-122.3849,United gate
+E7,Terminal 3,Domestic,Large,United,Yes,No,37.6193,-122.3851,United hub gate
+E9,Terminal 3,Domestic,Medium,United,Yes,No,37.6194,-122.3853,United gate
+E11,Terminal 3,Domestic,Large,United,Yes,No,37.6195,-122.3855,United hub gate
+E13,Terminal 3,Domestic,Medium,United,Yes,No,37.6196,-122.3857,United gate
+F1,Terminal 3,Domestic,Large,United,Yes,No,37.6185,-122.3840,United hub gate
+F3,Terminal 3,Domestic,Large,United,Yes,No,37.6186,-122.3842,United hub gate
+F5,Terminal 3,Domestic,Medium,United,Yes,No,37.6187,-122.3844,United gate
+F7,Terminal 3,Domestic,Large,United,Yes,No,37.6188,-122.3846,United hub gate
+F9,Terminal 3,Domestic,Medium,United,Yes,No,37.6189,-122.3848,United gate
+F11,Terminal 3,Domestic,Large,United,Yes,No,37.6190,-122.3850,United hub gate
+F13,Terminal 3,Domestic,Medium,United,Yes,No,37.6191,-122.3852,United gate
+F15,Terminal 3,Domestic,Large,United,Yes,No,37.6192,-122.3854,United hub gate
+F17,Terminal 3,Domestic,Medium,United,Yes,No,37.6193,-122.3856,United gate
+F19,Terminal 3,Domestic,Large,United,Yes,No,37.6194,-122.3858,United hub gate
+F21,Terminal 3,Domestic,Medium,United,Yes,No,37.6195,-122.3860,United gate
+A1,International,International,Extra Large,Any,Yes,Yes,37.6210,-122.3920,Wide-body capable
+A3,International,International,Extra Large,Any,Yes,Yes,37.6211,-122.3922,Wide-body capable
+A5,International,International,Large,Any,Yes,Yes,37.6212,-122.3924,International gate
+A7,International,International,Extra Large,Any,Yes,Yes,37.6213,-122.3926,Wide-body capable
+A9,International,International,Large,Any,Yes,Yes,37.6214,-122.3928,International gate
+A11,International,International,Extra Large,Any,Yes,Yes,37.6215,-122.3930,Wide-body capable
+A13,International,International,Large,Any,Yes,Yes,37.6216,-122.3932,International gate
+A15,International,International,Extra Large,Any,Yes,Yes,37.6217,-122.3934,Wide-body capable
+G1,International,International,Extra Large,Any,Yes,Yes,37.6200,-122.3910,Wide-body capable
+G3,International,International,Large,Any,Yes,Yes,37.6201,-122.3912,International gate
+G5,International,International,Extra Large,Any,Yes,Yes,37.6202,-122.3914,Wide-body capable
+G7,International,International,Large,Any,Yes,Yes,37.6203,-122.3916,International gate
+G9,International,International,Extra Large,Any,Yes,Yes,37.6204,-122.3918,Wide-body capable
+G11,International,International,Large,Any,Yes,Yes,37.6205,-122.3920,International gate
+G13,International,International,Extra Large,Any,Yes,Yes,37.6206,-122.3922,Wide-body capable 
