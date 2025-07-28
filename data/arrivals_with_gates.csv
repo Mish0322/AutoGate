@@ -1,21 +1,21 @@
 flight_number,airline,aircraft_type,origin,scheduled_arrival,actual_arrival,status,passengers,gate_assigned
 UA1234,United,Boeing 737-800,Los Angeles,14:30,14:32,Arrived,156,
-AA5678,American,Airbus A321,New York JFK,14:45,14:50,Approaching,180,32
-WN2345,Southwest,Boeing 737-700,Las Vegas,15:00,,En Route,143,11
-DL9876,Delta,Boeing 757-200,Seattle,15:15,,En Route,201,3
-AS1122,Alaska,Boeing 737-900,Portland,15:30,,En Route,178,21
+AA5678,American,Airbus A321,New York JFK,14:45,14:50,Approaching,180,D5
+WN2345,Southwest,Boeing 737-700,Las Vegas,15:00,,En Route,143,B17
+DL9876,Delta,Boeing 757-200,Seattle,15:15,,En Route,201,B7
+AS1122,Alaska,Boeing 737-900,Portland,15:30,,En Route,178,B15
 BA0285,British Airways,Boeing 777-300ER,London Heathrow,15:45,,En Route,345,A7
-LH0441,Lufthansa,Airbus A340-600,Frankfurt,16:00,,En Route,298,G1
-UA0870,United,Boeing 777-200,Tokyo Narita,16:15,,En Route,312,A11
-AF0083,Air France,Airbus A350-900,Paris CDG,16:30,,En Route,276,G13
-KL0606,KLM,Boeing 777-200ER,Amsterdam,16:45,,En Route,294,G5
-SQ0019,Singapore Airlines,Airbus A350-900,Singapore,17:00,,En Route,253,A1
-CX0879,Cathay Pacific,Boeing 777-300ER,Hong Kong,17:15,,En Route,335,WAITING
-VS0041,Virgin Atlantic,Boeing 787-9,London Heathrow,17:30,,En Route,255,A13
-WN1234,Southwest,Boeing 737-800,Phoenix,17:45,,En Route,162,17
-UA2567,United,Boeing 737-900,Denver,18:00,,En Route,171,38
-AA8901,American,Boeing 787-8,Miami,18:15,,En Route,234,44
-DL3456,Delta,Airbus A330-300,Atlanta,18:30,,En Route,267,G7
-AS7890,Alaska,Boeing 737-800,Anchorage,18:45,,En Route,134,15
-NH0007,ANA,Boeing 787-9,Tokyo Haneda,19:00,,En Route,246,A5
+LH0441,Lufthansa,Airbus A340-600,Frankfurt,16:00,,En Route,298,A11
+UA0870,United,Boeing 777-200,Tokyo Narita,16:15,,En Route,312,A1
+AF0083,Air France,Airbus A350-900,Paris CDG,16:30,,En Route,276,A5
+KL0606,KLM,Boeing 777-200ER,Amsterdam,16:45,,En Route,294,G7
+SQ0019,Singapore Airlines,Airbus A350-900,Singapore,17:00,,En Route,253,A13
+CX0879,Cathay Pacific,Boeing 777-300ER,Hong Kong,17:15,,En Route,335,G1
+VS0041,Virgin Atlantic,Boeing 787-9,London Heathrow,17:30,,En Route,255,G13
+WN1234,Southwest,Boeing 737-800,Phoenix,17:45,,En Route,162,B23
+UA2567,United,Boeing 737-900,Denver,18:00,,En Route,171,E5
+AA8901,American,Boeing 787-8,Miami,18:15,,En Route,234,D9
+DL3456,Delta,Airbus A330-300,Atlanta,18:30,,En Route,267,D13
+AS7890,Alaska,Boeing 737-800,Anchorage,18:45,,En Route,134,D7
+NH0007,ANA,Boeing 787-9,Tokyo Haneda,19:00,,En Route,246,G5
 TK0080,Turkish Airlines,Boeing 777-300ER,Istanbul,19:15,,En Route,349,WAITING

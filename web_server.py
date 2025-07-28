@@ -11,7 +11,7 @@ import os
 from datetime import datetime
 import threading
 import time
-from gate_genie import GateGenie
+# Gate assignment is now handled separately by gate_genie.py
 
 app = Flask(__name__)
 
@@ -63,32 +63,30 @@ def load_data():
         print(f"Error loading data: {e}")
 
 def simulate_real_time_updates():
-    """Simulate real-time updates by periodically running gate assignments"""
+    """Simple data refresh - just reload CSV files that were processed externally"""
     while True:
         try:
-            print("Running real-time gate assignment update...")
+            # print("Refreshing data from CSV files...")  # Commented out to reduce log spam
             
-            # Initialize Gate-Genie with API key
-            API_KEY = "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"
-            gate_genie = GateGenie(API_KEY)
-            
-            # Process any new arrivals
-            gate_genie.process_arrivals()
-            
-            # Reload data
+            # Just reload data from CSV files
             load_data()
             
-            # Wait 5 minutes before next update
-            time.sleep(300)
+            # Wait 30 seconds before next refresh
+            time.sleep(30)
             
         except Exception as e:
-            print(f"Error in real-time update: {e}")
-            time.sleep(60)  # Wait 1 minute before retrying
+            print(f"Error in data refresh: {e}")
+            time.sleep(10)  # Wait 10 seconds before retrying
 
 @app.route('/')
 def index():
     """Serve the main dashboard page"""
     return render_template('dashboard.html')
+
+@app.route('/map')
+def map_dashboard():
+    """Serve the interactive map dashboard"""
+    return render_template('map_dashboard.html')
 
 @app.route('/api/data')
 def get_data():
@@ -137,12 +135,13 @@ if __name__ == '__main__':
     # Load initial data
     load_data()
     
-    # Start real-time update thread
+    # Start data refresh thread (reads CSV files updated by gate_genie.py)
     update_thread = threading.Thread(target=simulate_real_time_updates, daemon=True)
     update_thread.start()
     
     print("Gate-Genie Web Server starting...")
     print("Dashboard will be available at: http://localhost:5000")
+    print("Note: Run 'python3 gate_genie.py' separately to process flight assignments")
     
     # Run Flask app
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False) 

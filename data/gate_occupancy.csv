@@ -1,54 +1,62 @@
-gate_number,status,current_flight,departure_time,available_time,notes
-1,Occupied,WN4567,16:30,16:45,Southwest departure to LAX
-3,Available,,,14:00,Ready for assignment
-5,Occupied,WN8901,17:15,17:30,Southwest departure to LAS
-7,Available,,,15:30,Ready for assignment
-9,Occupied,AS3456,16:00,16:15,Alaska departure to SEA
-11,Available,,,14:30,Ready for assignment
-13,Occupied,WN2345,18:00,18:15,Southwest departure to PHX
-15,Available,,,16:00,Ready for assignment
-17,Available,,,15:45,Ready for assignment
-19,Occupied,WN7890,17:30,17:45,Southwest departure to DEN
-21,Available,,,16:30,Ready for assignment
-23,Available,,,15:00,Ready for assignment
-30,Occupied,AA1234,16:45,17:00,American departure to JFK
-32,Available,,,15:15,Ready for assignment
-34,Occupied,VX567,17:00,17:15,Virgin departure to LAX
-36,Available,,,16:15,Ready for assignment
-38,Available,,,14:45,Ready for assignment
-40,Occupied,AA8901,18:30,18:45,American departure to MIA
-42,Available,,,17:00,Ready for assignment
-44,Available,,,15:30,Ready for assignment
-46,Occupied,VX234,16:30,16:45,Virgin departure to SEA
-48,Available,,,16:45,Ready for assignment
-50,Available,,,15:45,Ready for assignment
-52,Occupied,DL456,17:45,18:00,Delta departure to ATL
-54,Available,,,16:30,Ready for assignment
-56,Available,,,17:15,Ready for assignment
-58,Occupied,AA345,18:15,18:30,American departure to ORD
-70,Available,,,15:00,Ready for assignment
-72,Occupied,UA567,16:15,16:30,United departure to DEN
-74,Available,,,17:30,Ready for assignment
-76,Occupied,UA890,17:00,17:15,United departure to ORD
-78,Available,,,16:00,Ready for assignment
-80,Available,,,15:45,Ready for assignment
-82,Occupied,UA123,18:45,19:00,United departure to IAH
-84,Available,,,17:45,Ready for assignment
-86,Available,,,16:45,Ready for assignment
-88,Occupied,UA456,17:30,17:45,United departure to LAX
-90,Available,,,18:00,Ready for assignment
-A1,Available,,,16:30,Ready for assignment
-A3,Occupied,BA286,19:30,19:45,British Airways departure to LHR
-A5,Available,,,17:00,Ready for assignment
-A7,Available,,,15:30,Ready for assignment
-A9,Occupied,LH442,20:00,20:15,Lufthansa departure to FRA
-A11,Available,,,18:30,Ready for assignment
-A13,Available,,,17:15,Ready for assignment
-A15,Occupied,AF084,19:15,19:30,Air France departure to CDG
-G1,Available,,,16:00,Ready for assignment
-G3,Occupied,SQ020,21:00,21:15,Singapore Airlines departure to SIN
-G5,Available,,,18:15,Ready for assignment
-G7,Available,,,17:30,Ready for assignment
-G9,Occupied,CX880,20:30,20:45,Cathay Pacific departure to HKG
-G11,Available,,,19:00,Ready for assignment
-G13,Available,,,18:45,Ready for assignment 
+gate_number,status,current_flight,departure_time,available_time,turnaround_mins,notes
+B1,Occupied,WN4567,16:30,16:45,30,Southwest departure to LAX
+B3,Available,,,14:00,45,Ready for assignment
+B5,Occupied,WN8901,17:15,17:30,30,Southwest departure to LAS
+B7,Available,,,15:30,45,Ready for assignment
+B9,Occupied,AS3456,16:00,16:15,40,Alaska departure to SEA
+B11,Available,,,14:30,45,Ready for assignment
+B13,Occupied,WN2345,18:00,18:15,30,Southwest departure to PHX
+B15,Available,,,16:00,40,Ready for assignment
+B17,Available,,,15:45,30,Ready for assignment
+B19,Occupied,WN7890,17:30,17:45,30,Southwest departure to DEN
+B21,Available,,,16:30,40,Ready for assignment
+B23,Available,,,15:00,30,Ready for assignment
+B25,Occupied,DL456,17:45,18:00,35,Delta departure to ATL
+B27,Available,,,15:15,35,Ready for assignment
+C2,Occupied,AA1234,16:45,17:00,35,American departure to JFK
+C4,Available,,,15:15,35,Ready for assignment
+C6,Available,,,16:15,35,Ready for assignment
+C8,Available,,,14:45,35,Ready for assignment
+C10,Occupied,AS234,16:30,16:45,40,Alaska departure to SEA
+D1,Occupied,AA8901,18:30,18:45,35,American departure to MIA
+D3,Available,,,17:00,35,Ready for assignment
+D5,Available,,,15:30,35,Ready for assignment
+D7,Available,,,16:45,40,Ready for assignment
+D9,Available,,,15:45,35,Ready for assignment
+D11,Available,,,16:30,35,Ready for assignment
+D13,Available,,,17:15,35,Ready for assignment
+D15,Occupied,AA345,18:15,18:30,35,American departure to ORD
+D17,Available,,,16:00,35,Ready for assignment
+E1,Available,,,15:00,50,Ready for assignment
+E3,Occupied,UA567,16:15,16:30,50,United departure to DEN
+E5,Available,,,17:30,50,Ready for assignment
+E7,Occupied,UA890,17:00,17:15,50,United departure to ORD
+E9,Available,,,16:00,50,Ready for assignment
+E11,Available,,,15:45,50,Ready for assignment
+E13,Occupied,UA123,18:45,19:00,50,United departure to IAH
+F1,Available,,,17:45,50,Ready for assignment
+F3,Available,,,16:45,50,Ready for assignment
+F5,Occupied,UA456,17:30,17:45,50,United departure to LAX
+F7,Available,,,18:00,50,Ready for assignment
+F9,Available,,,15:30,50,Ready for assignment
+F11,Available,,,16:30,50,Ready for assignment
+F13,Available,,,17:00,50,Ready for assignment
+F15,Available,,,15:45,50,Ready for assignment
+F17,Occupied,UA789,16:45,17:00,50,United departure to SFO
+F19,Available,,,18:15,50,Ready for assignment
+F21,Available,,,17:30,50,Ready for assignment
+A1,Available,,,16:30,60,Ready for assignment
+A3,Occupied,BA286,19:30,19:45,90,British Airways departure to LHR
+A5,Available,,,17:00,60,Ready for assignment
+A7,Available,,,15:30,60,Ready for assignment
+A9,Occupied,LH442,20:00,20:15,90,Lufthansa departure to FRA
+A11,Available,,,18:30,60,Ready for assignment
+A13,Available,,,17:15,60,Ready for assignment
+A15,Occupied,AF084,19:15,19:30,90,Air France departure to CDG
+G1,Available,,,16:00,60,Ready for assignment
+G3,Occupied,SQ020,21:00,21:15,90,Singapore Airlines departure to SIN
+G5,Available,,,18:15,60,Ready for assignment
+G7,Available,,,17:30,60,Ready for assignment
+G9,Occupied,CX880,20:30,20:45,90,Cathay Pacific departure to HKG
+G11,Available,,,19:00,60,Ready for assignment
+G13,Available,,,18:45,60,Ready for assignment 

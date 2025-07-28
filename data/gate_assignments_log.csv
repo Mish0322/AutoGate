@@ -1,20 +1,20 @@
-timestamp,flight_number,airline,aircraft_type,origin,assigned_gate,assignment_reason
-2025-07-27T17:44:58.064999,AA5678,American,Airbus A321,New York JFK,32,AI-optimized assignment
-2025-07-27T17:45:00.342545,WN2345,Southwest,Boeing 737-700,Las Vegas,11,AI-optimized assignment
-2025-07-27T17:45:02.666243,DL9876,Delta,Boeing 757-200,Seattle,3,AI-optimized assignment
-2025-07-27T17:45:05.061507,AS1122,Alaska,Boeing 737-900,Portland,21,AI-optimized assignment
-2025-07-27T17:45:06.973324,BA0285,British Airways,Boeing 777-300ER,London Heathrow,A7,AI-optimized assignment
-2025-07-27T17:45:09.212568,LH0441,Lufthansa,Airbus A340-600,Frankfurt,G1,AI-optimized assignment
-2025-07-27T17:45:11.075312,UA0870,United,Boeing 777-200,Tokyo Narita,A11,AI-optimized assignment
-2025-07-27T17:45:12.903361,AF0083,Air France,Airbus A350-900,Paris CDG,G13,AI-optimized assignment
-2025-07-27T17:45:14.846513,KL0606,KLM,Boeing 777-200ER,Amsterdam,G5,AI-optimized assignment
-2025-07-27T17:45:16.918885,SQ0019,Singapore Airlines,Airbus A350-900,Singapore,A1,AI-optimized assignment
-2025-07-27T17:45:18.532159,CX0879,Cathay Pacific,Boeing 777-300ER,Hong Kong,WAITING,AI-optimized assignment
-2025-07-27T17:45:20.559213,VS0041,Virgin Atlantic,Boeing 787-9,London Heathrow,A13,AI-optimized assignment
-2025-07-27T17:45:22.425181,WN1234,Southwest,Boeing 737-800,Phoenix,17,AI-optimized assignment
-2025-07-27T17:45:24.402126,UA2567,United,Boeing 737-900,Denver,38,AI-optimized assignment
-2025-07-27T17:45:26.285342,AA8901,American,Boeing 787-8,Miami,44,AI-optimized assignment
-2025-07-27T17:45:28.345812,DL3456,Delta,Airbus A330-300,Atlanta,G7,AI-optimized assignment
-2025-07-27T17:45:30.221929,AS7890,Alaska,Boeing 737-800,Anchorage,15,AI-optimized assignment
-2025-07-27T17:45:32.085479,NH0007,ANA,Boeing 787-9,Tokyo Haneda,A5,AI-optimized assignment
-2025-07-27T17:45:33.694251,TK0080,Turkish Airlines,Boeing 777-300ER,Istanbul,WAITING,AI-optimized assignment
+timestamp,flight_number,airline,aircraft_type,origin,assigned_gate,assignment_reason,passengers,scheduled_arrival,status
+2025-07-27T18:20:44.282000,AA5678,American,Airbus A321,New York JFK,D5,"Optimal assignment: American hub gate in Terminal 2, correct American terminal, medium aircraft fits large gate, highest operational efficiency score",180,14:45,Approaching
+2025-07-27T18:20:46.148574,WN2345,Southwest,Boeing 737-700,Las Vegas,B17,"Optimal assignment: Southwest hub gate in Terminal 1, correct Southwest terminal, medium aircraft fits medium gate, highest operational efficiency score",143,15:00,En Route
+2025-07-27T18:20:48.085565,DL9876,Delta,Boeing 757-200,Seattle,B7,Optimal assignment: medium aircraft fits medium gate,201,15:15,En Route
+2025-07-27T18:20:49.982839,AS1122,Alaska,Boeing 737-900,Portland,B15,"Optimal assignment: Alaska hub gate in Terminal 1, medium aircraft fits medium gate, highest operational efficiency score",178,15:30,En Route
+2025-07-27T18:20:51.827327,BA0285,British Airways,Boeing 777-300ER,London Heathrow,A7,"Optimal assignment: international arrival with customs capability, extra large aircraft fits extra large gate, highest operational efficiency score",345,15:45,En Route
+2025-07-27T18:20:53.689012,LH0441,Lufthansa,Airbus A340-600,Frankfurt,A11,"Optimal assignment: international arrival with customs capability, extra large aircraft fits extra large gate, highest operational efficiency score",298,16:00,En Route
+2025-07-27T18:20:55.615354,UA0870,United,Boeing 777-200,Tokyo Narita,A1,"Optimal assignment: international arrival with customs capability, large aircraft fits extra large gate, highest operational efficiency score",312,16:15,En Route
+2025-07-27T18:20:57.650564,AF0083,Air France,Airbus A350-900,Paris CDG,A5,"Optimal assignment: international arrival with customs capability, large aircraft fits large gate, highest operational efficiency score",276,16:30,En Route
+2025-07-27T18:20:59.630309,KL0606,KLM,Boeing 777-200ER,Amsterdam,G7,"Optimal assignment: international arrival with customs capability, large aircraft fits large gate, highest operational efficiency score",294,16:45,En Route
+2025-07-27T18:21:01.517496,SQ0019,Singapore Airlines,Airbus A350-900,Singapore,A13,"Optimal assignment: international arrival with customs capability, large aircraft fits large gate, highest operational efficiency score",253,17:00,En Route
+2025-07-27T18:21:03.484471,CX0879,Cathay Pacific,Boeing 777-300ER,Hong Kong,G1,"Optimal assignment: international arrival with customs capability, extra large aircraft fits extra large gate, highest operational efficiency score",335,17:15,En Route
+2025-07-27T18:21:05.437433,VS0041,Virgin Atlantic,Boeing 787-9,London Heathrow,G13,"Optimal assignment: international arrival with customs capability, large aircraft fits extra large gate, highest operational efficiency score",255,17:30,En Route
+2025-07-27T18:21:07.307134,WN1234,Southwest,Boeing 737-800,Phoenix,B23,"Optimal assignment: Southwest hub gate in Terminal 1, correct Southwest terminal, medium aircraft fits medium gate, highest operational efficiency score",162,17:45,En Route
+2025-07-27T18:21:09.221537,UA2567,United,Boeing 737-900,Denver,E5,"Optimal assignment: United hub gate in Terminal 3, correct United terminal, medium aircraft fits medium gate, highest operational efficiency score",171,18:00,En Route
+2025-07-27T18:21:11.160002,AA8901,American,Boeing 787-8,Miami,D9,"Optimal assignment: American hub gate in Terminal 2, correct American terminal, large aircraft fits large gate, highest operational efficiency score",234,18:15,En Route
+2025-07-27T18:21:13.063113,DL3456,Delta,Airbus A330-300,Atlanta,D13,"Optimal assignment: large aircraft fits large gate, highest operational efficiency score",267,18:30,En Route
+2025-07-27T18:21:14.932266,AS7890,Alaska,Boeing 737-800,Anchorage,D7,"Optimal assignment: Alaska hub gate in Terminal 2, medium aircraft fits medium gate, highest operational efficiency score",134,18:45,En Route
+2025-07-27T18:21:16.815835,NH0007,ANA,Boeing 787-9,Tokyo Haneda,G5,"Optimal assignment: international arrival with customs capability, large aircraft fits extra large gate, highest operational efficiency score",246,19:00,En Route
+2025-07-27T18:21:18.432983,TK0080,Turkish Airlines,Boeing 777-300ER,Istanbul,WAITING,"No assignment possible: Extra Large aircraft requires extra large or larger gates, but none available; International flight requires customs-capable gates, but none available",349,19:15,En Route
