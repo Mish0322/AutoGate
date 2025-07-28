@@ -48,12 +48,12 @@ def load_data():
             assignments_df = pd.read_csv("data/gate_assignments_log.csv")
             assignments = assignments_df.to_dict('records')
         
-        # Update global data
+        # Update global data - replace NaN values with None for valid JSON
         dashboard_data.update({
-            'arrivals': arrivals_df.to_dict('records'),
+            'arrivals': arrivals_df.fillna('').to_dict('records'),
             'assignments': assignments,
-            'gate_occupancy': gate_occupancy_df.to_dict('records'),
-            'gates_config': gates_config_df.to_dict('records'),
+            'gate_occupancy': gate_occupancy_df.fillna('').to_dict('records'),
+            'gates_config': gates_config_df.fillna('').to_dict('records'),
             'last_updated': datetime.now().isoformat()
         })
         
