@@ -51,12 +51,12 @@ A5,Occupied,AF0083,,16:30,60,Ready for assignment
 A7,Occupied,BA0285,,15:45,60,Ready for assignment
 A9,Occupied,LH442,20:00,20:15,90,Lufthansa departure to FRA
 A11,Occupied,LH0441,,16:00,60,Ready for assignment
-A13,Occupied,VS0041,,17:30,60,Ready for assignment
+A13,Occupied,SQ0019,,17:00,60,Ready for assignment
 A15,Occupied,AF084,19:15,19:30,90,Air France departure to CDG
-G1,Occupied,SQ0019,,17:00,60,Ready for assignment
+G1,Occupied,CX0879,,17:15,60,Ready for assignment
 G3,Occupied,SQ020,21:00,21:15,90,Singapore Airlines departure to SIN
-G5,Occupied,CX0879,,17:15,60,Ready for assignment
+G5,Occupied,NH0007,,19:00,60,Ready for assignment
 G7,Occupied,KL0606,,16:45,60,Ready for assignment
 G9,Occupied,CX880,20:30,20:45,90,Cathay Pacific departure to HKG
-G11,Occupied,NH0007,,19:00,60,Ready for assignment
-G13,Occupied,TK0080,,19:15,60,Ready for assignment 
+G11,Available,,,19:00,60,Ready for assignment
+G13,Occupied,VS0041,,17:30,60,Ready for assignment 

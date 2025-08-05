@@ -1,151 +1,152 @@
-# 🛫 Gate-Genie: AI-Powered Airport Gate Assignment System
+# Gate-Genie
 
-**Gate-Genie** is an intelligent gate assignment system for San Francisco International Airport (SFO) that uses **NVIDIA NIM Llama-3** to make smart, real-time gate assignments for arriving aircraft.
+An intelligent gate assignment system for airports that uses AI to optimize gate allocations based on multiple operational factors.
 
-## ✨ Features
+## Overview
 
-- **🤖 AI-Powered Assignments**: Uses NVIDIA NIM Llama-3.1-70B to intelligently assign gates based on multiple factors
-- **📊 Real-time Dashboard**: Beautiful web interface showing arrivals, gate status, and assignments
-- **🎯 Smart Logic**: Considers aircraft size, airline preferences, customs requirements, and operational efficiency
-- **📈 Live Updates**: Automatic processing of new arrivals every 5 minutes
-- **🏢 Realistic Data**: Uses actual SFO gate numbers and terminal configurations
+Gate-Genie processes flight arrival data and automatically assigns aircraft to available gates using NVIDIA's NIM API with Llama-3. The system considers aircraft size, airline preferences, turnaround times, gate capabilities, and passenger volume to make optimal assignments.
 
-## 🚀 Quick Start
+The system provides two interfaces: a data table dashboard for operational oversight and an interactive map view for spatial gate management.
 
-### Prerequisites
+## Possible Use Cases
+
+- **Airport Operations Centers**: Real-time gate assignment optimization
+- **Ground Handling Companies**: Resource planning and coordination
+- **Airlines**: Gate preference enforcement and conflict resolution
+- **Airport Planning**: Capacity analysis and bottleneck identification
+
+## Making It Actually Useful
+
+To transform this from a demonstration into a production system, several components would need development:
+
+**Real-time Data Integration:**
+- Airport Operational Database (AODB) integration
+- SITA or ARINC flight information feeds
+- Gate management system APIs
+- Aircraft positioning and status feeds
+
+**Production Infrastructure:**
+- Database backend replacing CSV files
+- User authentication and role-based access
+- Audit logging and compliance tracking
+- Failover and redundancy systems
+- Integration with existing airport management software
+
+**Operational Requirements:**
+- 24/7 monitoring and alerting
+- Multi-airport configuration management
+- Historical data analysis and reporting
+- Conflict resolution workflows
+- Manual override capabilities
+
+**Regulatory Compliance:**
+- Airport authority approval processes
+- Safety management system integration
+- Data privacy and security standards
+- Change management procedures
+
+## Limitations
+
+- Currently configured for SFO airport layout
+- Requires manual CSV data updates for real-time operation
+- AI decisions are recommendations, not automated implementations
+- Single-user interface without authentication
+
+## Disclaimer
+
+This project is an experimental demonstration of AI applications in airport operations. It is not production-ready software and should not be used for actual gate assignment decisions. The system uses mock data and simplified logic that does not account for the full complexity of real airport operations, safety protocols, or regulatory requirements. This is purely an educational exploration of how AI might assist in operational decision-making processes.
+
+## Technical Implementation
+
+**Backend:**
+- Python Flask web server for API endpoints and dashboard serving
+- Pandas for CSV data processing and manipulation
+- NVIDIA NIM API integration for AI-powered decision making
+- Real-time data updates via threaded background processes
+
+**Frontend:**
+- HTML/CSS/JavaScript dashboard with dark theme
+- Leaflet.js interactive map for spatial gate visualization
+- RESTful API consumption for live data updates
+- Responsive design for multiple device types
+
+**Data Sources:**
+- Flight arrivals CSV with aircraft and timing data
+- Gate configuration with capacity and airline preferences
+- Real-time gate occupancy status
+- Assignment history and reasoning logs
+
+## Architecture
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   CSV Data      │───▶│   Gate-Genie     │───▶│   Web Dashboard │
+│   Sources       │    │   AI Processor   │    │   & Map View    │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+                              │
+                              ▼
+                       ┌──────────────────┐
+                       │   NVIDIA NIM     │
+                       │   Llama-3 API    │
+                       └──────────────────┘
+```
+
+## Data Processing
+
+The system processes four main data types:
+
+- **arrivals.csv**: Flight schedules, aircraft types, passenger counts, origins
+- **gates_config.csv**: Gate specifications, airline preferences, aircraft size limits
+- **gate_occupancy.csv**: Current gate status, turnaround times, availability
+- **gate_assignments_log.csv**: Assignment history with AI reasoning
+
+Gate assignments consider:
+- Aircraft size compatibility with gate specifications
+- Airline preference matching where possible
+- Minimum turnaround time requirements
+- Passenger volume and gate capacity
+- Terminal logistics and customs requirements
+
+## API Endpoints
+
+- `GET /api/data` - Complete dashboard dataset
+- `GET /api/arrivals` - Flight arrival information
+- `GET /api/gates` - Gate status and configuration
+- `GET /api/assignments` - Recent assignment history
+- `POST /refresh` - Manual data refresh trigger
+
+## Requirements
+
 - Python 3.8+
-- NVIDIA NIM API key (replace in `gate_genie.py` and `web_server.py`)
+- NVIDIA NIM API access
+- 2GB RAM minimum for data processing
+- Modern web browser for dashboard access
 
-### Installation
+## Setup
 
-1. **Clone and setup**:
-   ```bash
-   cd AutoGate
-   pip install -r requirements.txt
-   ```
+1. **Install Dependencies**:
+```bash
+pip install -r requirements.txt
+```
 
 2. **Set up Environment Variables**:
 ```bash
 # Copy the example environment file
-cp .env.example .env
+cp .env_example.txt .env
 
 # Edit .env and add your NVIDIA NIM API key
 # NVIDIA_API_KEY=your-actual-api-key-here
 ```
 
-3. **Run the system**:
-   ```bash
-   # Option 1: Run gate assignment once
-   python gate_genie.py
-   
-   # Option 2: Run web server with real-time updates
-   python web_server.py
-   ```
-
-4. **Access Dashboard**:
-   Open http://localhost:5000 in your browser
-
-## 📁 Project Structure
-
-```
-AutoGate/
-├── data/                          # CSV data files
-│   ├── arrivals.csv              # Incoming flight data
-│   ├── gates_config.csv          # SFO gate configurations  
-│   ├── gate_occupancy.csv        # Current gate status
-│   └── [generated files]         # Output CSVs
-├── templates/
-│   └── dashboard.html            # Web interface
-├── gate_genie.py                 # Main AI assignment engine
-├── web_server.py                 # Flask web server
-├── requirements.txt              # Python dependencies
-└── README.md                     # This file
-```
-
-## 🧠 How It Works
-
-### AI Decision Process
-1. **Compatibility Check**: Filters gates based on aircraft size and customs requirements
-2. **AI Analysis**: NVIDIA NIM evaluates factors like:
-   - Aircraft size compatibility (Medium/Large/Extra Large)
-   - International vs Domestic routing
-   - Airline terminal preferences (United→T3, American→T2, Southwest→T1)
-   - Gate availability and passenger capacity
-3. **Smart Assignment**: Returns optimal gate choice with reasoning
-
-### Real-time Processing
-- **Automatic Updates**: Web server runs gate assignments every 5 minutes
-- **Live Dashboard**: Frontend refreshes every 30 seconds
-- **Rate Limiting**: Respects NVIDIA NIM API limits (40 calls/minute)
-
-## 📊 Sample Data
-
-### Airlines & Terminals
-- **Terminal 1**: Southwest, Alaska Airlines
-- **Terminal 2**: American, Delta, Virgin America  
-- **Terminal 3**: United (hub)
-- **International**: All international carriers
-
-### Aircraft Classifications
-- **Medium**: Boeing 737, Airbus A320 series
-- **Large**: Boeing 777, 787, Airbus A350, A330
-- **Extra Large**: Boeing 747, Airbus A380, wide-body variants
-
-## 🔧 API Endpoints
-
-- `GET /` - Main dashboard
-- `GET /api/data` - All data (arrivals, gates, assignments)
-- `GET /api/arrivals` - Flight arrivals only
-- `GET /api/gates` - Gate status only  
-- `GET /api/assignments` - Recent AI assignments
-- `GET /refresh` - Manual data refresh
-
-## 📈 Output Files
-
-- `arrivals_with_gates.csv` - Updated arrivals with gate assignments
-- `gate_assignments_log.csv` - Detailed assignment history
-- `gate_occupancy_updated.csv` - Updated gate status
-
-## 🎛️ Configuration
-
-### API Key Setup
-Create a `.env` file in the project root:
-```
-NVIDIA_API_KEY=your-nvidia-nim-api-key-here
-```
-
-### Customization Options
-- Modify gate priorities in `assign_gate_with_ai()`
-- Adjust update frequency in `web_server.py` (currently 5 minutes)
-- Add more airlines/aircraft types in classification functions
-
-## 🚨 Notes
-
-- **Demo System**: Uses mock data for realistic testing
-- **API Costs**: Each assignment makes 1 NVIDIA NIM API call
-- **Rate Limits**: Built-in delays to respect API limits
-- **Fallback Logic**: Handles API errors gracefully
-
-## 🛠️ Troubleshooting
-
-**Common Issues:**
-- **Missing CSV files**: Ensure `data/` directory exists with all CSV files
-- **API errors**: Check NVIDIA NIM API key and network connection
-- **Port conflicts**: Web server uses port 5000 (configurable)
-
-**Dependencies Issues:**
+3. **Run the System**:
 ```bash
-pip install --upgrade pandas flask openai requests
+# Start the web server
+python3 web_server.py
+
+# In a separate terminal, run gate assignments
+python3 gate_genie.py
 ```
 
-## 🎯 Future Enhancements
-
-- Real SFO data integration via APIs
-- WebSocket real-time updates
-- Historical analytics and reporting
-- Mobile-responsive design improvements
-- Multi-airport support
-
----
-
-Built with ❤️ using NVIDIA NIM, Python, and modern web technologies. 
+4. **Access Interfaces**:
+- Dashboard: http://localhost:5000
+- Interactive Map: http://localhost:5000/map 
