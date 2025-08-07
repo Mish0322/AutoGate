@@ -29,7 +29,6 @@ share/python-wheels/
 MANIFEST
 
 # IDEs
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -40,3 +39,7 @@ Thumbs.db
 
 # Logs
 *.log 
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

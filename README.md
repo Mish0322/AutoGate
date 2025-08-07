@@ -1,4 +1,4 @@
-# Gate-Genie
+# GateMate
 
 An intelligent gate assignment system for airports that uses AI to optimize gate allocations based on multiple operational factors.
 
